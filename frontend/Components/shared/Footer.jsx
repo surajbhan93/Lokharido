@@ -3,19 +3,19 @@ import { Facebook, Twitter, Instagram, Linkedin, Smartphone, CreditCard } from "
 
 export default function Footer() {
 
-  // 1. Data-Driven Approach: We store links in arrays so we don't repeat HTML
+
   const customerService = [
     { name: "Contact Us", href: "/contact" },
     { name: "Track Order", href: "/track" },
-    { name: "Return Order", href: "/return" },
-    { name: "Cancel Order", href: "/cancel" },
+    { name: "Return Policy", href: "/return-policy" },
+    { name: "Shipping Policy", href: "/shipping-policy" },
   ];
 
   const companyLinks = [
     { name: "About Us", href: "/about" },
     { name: "Terms & Conditions", href: "/terms" },
     { name: "Privacy Policy", href: "/privacy" },
-    { name: "We are Hiring", href: "/careers" },
+    { name: "Return Policy", href: "/return-policy" },
   ];
 
   return (
@@ -26,19 +26,15 @@ export default function Footer() {
 
         {/* COL 1: CUSTOMER SERVICE */}
         <div>
-          <h3 className="text-yellow-400 font-semibold mb-4 tracking-wide">CUSTOMER SERVICE</h3>
-          <ul className="space-y-2">
-            {customerService.map((link) => (
-              <li key={link.name}>
-                <Link href={link.href} className="hover:text-white transition-colors">
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-6 space-y-2 text-xs text-slate-400">
-            <p>🚚 15 Days Return Policy*</p>
-            <p>💰 Cash On Delivery*</p>
+          <h3 className="text-yellow-400 font-semibold mb-4 tracking-wide">LOKHARIDO</h3>
+          <p className="text-slate-400 mb-2">
+            India's Trusted Online Shopping Bazaar. Verified products at affordable prices.
+          </p>
+          <div className="text-xs text-slate-500 mt-4 space-y-1">
+            <p>📍 Prayagraj, Uttar Pradesh, India</p>
+            <p>🏷️ CIN: U18101UP2021PTC146124</p>
+            <p>📞 +91 7052333033</p>
+            <p>📧 support@lokharido.com</p>
           </div>
         </div>
 
