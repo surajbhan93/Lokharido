@@ -2,7 +2,7 @@ import HeroCard from "./HeroCard";
 
 export default function Hero() {
     return (
-        <section className="relative bg-gradient-to-t from-sky-400 to-pink-500py-12 md:py-20 overflow-hidden">
+        <section className="relative bg-linear-to-t from-sky-400 to-white py-12 md:py-20 overflow-hidden">
 
             {/* 1. The 'SHOP FOR' Header */}
             <div className="text-center mb-10 relative z-10">

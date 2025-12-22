@@ -14,15 +14,16 @@ export default function Navbar() {
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
 
                 {/* 1. Logo */}
-                <Link href="/" className="text-2xl font-bold tracking-tight text-yellow-500">
+                <Link href="/" className="text-2xl font-bold tracking-tight text-sky-400">
                     LOKHARIDO
+
                 </Link>
 
                 {/* 2. Navigation Links (Hidden on mobile usually, but keep simple for now) */}
                 <nav className="hidden md:flex gap-6 font-medium">
-                    <Link href="/men" className="hover:text-yellow-500">Men</Link>
-                    <Link href="/women" className="hover:text-yellow-500">Women</Link>
-                    <Link href="/accessories" className="hover:text-yellow-500">Accessories</Link>
+                    <Link href="/men" className="hover:text-sky-400">Men</Link>
+                    <Link href="/women" className="hover:text-sky-400">Women</Link>
+                    <Link href="/accessories" className="hover:text-sky-400">Accessories</Link>
                 </nav>
 
                 {/* 3. Search & Icons */}

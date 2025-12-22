@@ -11,7 +11,7 @@ export default function HeroCard({ image, category, href }: HeroCardProps) {
     return (
         <Link href={href} className="group block relative w-full max-w-64 mx-auto">
             {/* 1. The Card Container */}
-            <div className="relative aspect-3/4 rounded-3xl overflow-hidden border-2 border-yellow-400 bg-white shadow-xl transition-transform duration-300 group-hover:-translate-y-2">
+            <div className="relative aspect-3/4 rounded-3xl overflow-hidden border-2 border-sky-400 bg-white shadow-xl transition-transform duration-300 group-hover:-translate-y-2">
 
                 {/* 2. The Image */}
                 <Image

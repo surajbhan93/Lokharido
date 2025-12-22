@@ -55,7 +55,7 @@ export default function MenPage() {
                                         {banner.subtitle}
                                     </p>
                                     <Link href={banner.link}>
-                                        <Button size="lg" className="bg-yellow-400 text-black hover:bg-yellow-500 font-bold px-10 py-6 text-lg rounded-full shadow-xl">
+                                        <Button size="lg" className="bg-sky-400 text-white hover:bg-sky-500 font-bold px-10 py-6 text-lg rounded-full shadow-xl">
                                             {banner.cta}
                                         </Button>
                                     </Link>
@@ -83,23 +83,29 @@ export default function MenPage() {
                 >
                     <CarouselContent className="-ml-4">
                         {trendingCategories.map((cat) => (
-                            <CarouselItem
-                                key={cat.name}
-                                className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6"
-                            >
-                                <div className="relative aspect-[3/4] group cursor-pointer overflow-hidden rounded-lg">
-                                    <Image
-                                        src={cat.image}
-                                        alt={cat.name}
-                                        fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                                    <span className="absolute bottom-4 left-0 w-full text-center text-white font-bold text-lg">
-                                        {cat.name}
-                                    </span>
-                                </div>
+
+                            <CarouselItem key={cat.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6">
+
+
+                                <Link
+                                    href={`/shop/${cat.name.toLowerCase().replace(" ", "-")}`}
+                                    className="block w-full h-full"
+                                >
+                                    <div className="relative aspect-[3/4] group cursor-pointer overflow-hidden rounded-lg">
+                                        <Image
+                                            src={cat.image}
+                                            alt={cat.name}
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                                        <span className="absolute bottom-4 left-0 w-full text-center text-white font-bold text-lg">
+                                            {cat.name}
+                                        </span>
+                                    </div>
+                                </Link>
                             </CarouselItem>
+
                         ))}
                     </CarouselContent>
 
@@ -113,7 +119,7 @@ export default function MenPage() {
             {/* 4. Trending Shirts (Horizontal List) */}
             <HorizontalCarousel
                 title="Trending Shirts"
-                viewAllHref="/shirts"
+                viewAllHref="/shop/shirts"
                 items={trendingShirts.map((product) => (
                     <ProductCard key={product.id} {...product} />
                 ))}
@@ -123,7 +129,7 @@ export default function MenPage() {
             {/* 5. Trending Pants (Now using HorizontalCarousel component) */}
             <HorizontalCarousel
                 title="Trending Pants & Jeans"
-                viewAllHref="/pants"
+                viewAllHref="/shop/pants"
                 items={trendingPants.map((product) => (
                     <ProductCard key={product.id} {...product} />
                 ))}
