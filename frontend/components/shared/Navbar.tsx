@@ -1,10 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Search, ShoppingBag, Heart, User } from "lucide-react";
 import { Button } from "@/components/ui/button"; // Shadcn Button
+import { useCartStore } from "@/store/cartStore";
 
 export default function Navbar() {
+    // Read the total count from Zustand
+    // The state selector ensures this ONLY re-renders when 'items' changes
+    const totalItems = useCartStore((state) => state.getTotalItems());
     return (
-        <header className="border-b">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b">
             {/* Top Strip (Like Bewakoof's yellow strip) */}
             <div className="bg-slate-100 text-xs py-1 text-center">
                 Get free shipping on orders over ₹500!
@@ -43,8 +49,19 @@ export default function Navbar() {
                     </Button>
 
                     <Button variant="ghost" size="icon">
-                        <ShoppingBag className="w-5 h-5" />
+                        <Link href="/cart" className="relative p-2 hover:bg-slate-100 rounded-full">
+                            <ShoppingBag size={24} />
+
+                            {/* The Red Badge */}
+                            {totalItems > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">
+                                    {totalItems}
+                                </span>
+                            )}
+                        </Link>
                     </Button>
+
+
 
                     <Button variant="ghost" size="icon">
                         <User className="w-5 h-5" />
