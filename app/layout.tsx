@@ -1,19 +1,17 @@
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/Components/Footer";
 
-export default function RootLayout({ children }) {
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
+const inter = Inter({ subsets: ["latin"] });
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen">
-        
-        {/* Page Content */}
-        <main className="flex-grow">
-          {children}
-        </main>
-
-        {/* Footer */}
+      <body className={`${inter.className} pt-20`}>
+        <Navbar />
+        {children}
         <Footer />
-
       </body>
     </html>
   );
