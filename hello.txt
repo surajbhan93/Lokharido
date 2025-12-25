@@ -1,0 +1,60 @@
+http://localhost:5000/api/auth/login
+http://localhost:5000/api/auth/signup
+
+Product:
+1️⃣ Get All Products (Listing Page)
+http://localhost:5000/api/products
+
+2️⃣ Get Product by ID (Product Detail)
+http://localhost:5000/api/products/65b7a91c8c2d8c3a10f1eabc
+
+3️⃣ Category Wise Products
+
+http://localhost:5000/api/products?category=tshirt
+
+4️⃣ Search Products
+http://localhost:5000/api/products?search=black
+
+5️⃣ Price Filter
+
+http://localhost:5000/api/products?minPrice=500&maxPrice=1200
+
+6️⃣ Size & Color Filter
+http://localhost:5000/api/products?size=L&color=Black
+
+7️⃣ Sorting
+Purpose	URL
+Price Low → High	http://localhost:5000/api/products?sort=price_low
+Price High → Low	http://localhost:5000/api/products?sort=price_high
+Newest	http://localhost:5000/api/products?sort=newest
+Rating	http://localhost:5000/api/products?sort=rating
+
+8️⃣ Add Product (Admin)
+http://localhost:5000/api/products
+Body:
+{
+  "title": "Oversized Black T-Shirt",
+  "slug": "oversized-black-tshirt",
+  "brand": "Bewakoof",
+  "price": 699,
+  "mrp": 1299,
+  "discountPercent": 46,
+  "category": "tshirt",
+  "subCategory": "oversized",
+  "sizes": ["S", "M", "L", "XL"],
+  "colors": ["Black"],
+  "thumbnail": "https://image-url.com/thumb.jpg",
+  "images": [
+    "https://image-url.com/1.jpg",
+    "https://image-url.com/2.jpg"
+  ],
+  "rating": 4.5,
+  "totalReviews": 120,
+  "isActive": true
+}
+
+9️⃣ Update Product (Admin)
+http://localhost:5000/api/products/65b7a91c8c2d8c3a10f1eabc
+
+🔟 Delete Product (Admin)
+http://localhost:5000/api/products/65b7a91c8c2d8c3a10f1eabc
