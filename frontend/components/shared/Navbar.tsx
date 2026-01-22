@@ -11,7 +11,7 @@ export default function Navbar() {
     const totalItems = useCartStore((state) => state.getTotalItems());
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b">
-            {/* Top Strip (Like Bewakoof's yellow strip) */}
+
             <div className="bg-slate-100 text-xs py-1 text-center">
                 Get free shipping on orders over ₹500!
             </div>

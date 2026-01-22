@@ -15,7 +15,7 @@ export default function ProductCard({ image, brand, name, price, originalPrice, 
     return (
         <div className="w-full cursor-pointer group border  rounded-sm bg-zinc-50 p-1 flex flex-col rounded-t-xl">
             {/* Image Section */}
-            <div className="relative aspect-[3/4] overflow-hidden rounded-lg mb-3">
+            <div className="relative aspect-3/4 overflow-hidden rounded-lg mb-3">
                 <Image src={image} alt={name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
 
                 {/* Rating Badge */}
@@ -32,7 +32,7 @@ export default function ProductCard({ image, brand, name, price, originalPrice, 
             {/* Details Section */}
             <div>
                 <h3 className="text-xs font-bold text-slate-500 uppercase mb-1">{brand}</h3>
-                <h2 className="text-sm font-medium text-slate-900 line-clamp-1 mb-1 group-hover:text-sky-600">{name}</h2>
+                <h2 className="text-sm font-medium text-slate-900 line-clamp-1 mb-1 group-hover:text-sky-400">{name}</h2>
                 <div className="flex items-center gap-2">
                     <span className="text-lg font-bold text-slate-900">₹{price}</span>
                     <span className="text-xs text-slate-400 line-through">₹{originalPrice}</span>

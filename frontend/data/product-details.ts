@@ -36,7 +36,7 @@ export interface ProductDetails {
 export const sampleProduct: ProductDetails = {
     id: "101",
     name: "Men's Black Bomber Jacket with Patchwork",
-    brand: "Bewakoof®",
+    brand: "Lokharido®",
     price: 2499,
     originalPrice: 4999,
     discount: 50,
