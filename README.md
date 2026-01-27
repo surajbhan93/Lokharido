@@ -88,5 +88,3 @@ Open http://localhost:3000 with your browser to see the result.
 Contributors
 [Shubham Verma] - Frontend Architect & UI/UX
 [Suraj Bhan] - Backend API & Database
-
-<div align="center"> <sub>Built with ❤️ for the Modern Web. © 2026 Lokharido.</sub> </div>
